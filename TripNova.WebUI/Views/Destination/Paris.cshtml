@@ -1,0 +1,306 @@
+﻿@model List<TripNova.WebUI.Dtos.HotelSearchDto>
+
+<div class="info-card mt-4">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-7">
+
+            <div style="
+                display:inline-block;
+                background:rgba(200,164,93,.12);
+                border:1px solid rgba(200,164,93,.25);
+                padding:10px 18px;
+                border-radius:40px;
+                color:#C8A45D;
+                margin-bottom:25px;">
+
+                ✨ Yapay Zeka Destekli Öneri
+            </div>
+
+            <h1 style="
+                font-size:62px;
+                font-weight:900;
+                margin-bottom:20px;
+                line-height:1.1;">
+
+                Size Özel
+                Lüks Konaklama
+            </h1>
+
+            <p style="
+                color:#bdbdbd;
+                font-size:20px;
+                line-height:1.9;
+                margin-bottom:40px;">
+
+                Seyahat tarzınıza, bütçenize ve premium beklentilerinize göre
+                yapay zeka destekli lüks otel önerileri keşfedin.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div style="
+                        background:rgba(255,255,255,.03);
+                        border-radius:24px;
+                        padding:25px;
+                        border:1px solid rgba(255,255,255,.05);">
+
+                        <div style="
+                            color:#9e9e9e;
+                            margin-bottom:12px;">
+
+                            Destinasyon
+                        </div>
+
+                        <div style="
+                            font-size:26px;
+                            font-weight:800;">
+
+                            @ViewBag.CityName
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div style="
+                        background:rgba(255,255,255,.03);
+                        border-radius:24px;
+                        padding:25px;
+                        border:1px solid rgba(255,255,255,.05);">
+
+                        <div style="
+                            color:#9e9e9e;
+                            margin-bottom:12px;">
+
+                            Bütçe
+                        </div>
+
+                        <div style="
+                            font-size:26px;
+                            font-weight:800;">
+
+                            $5000
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div style="
+                        background:rgba(255,255,255,.03);
+                        border-radius:24px;
+                        padding:25px;
+                        border:1px solid rgba(255,255,255,.05);">
+
+                        <div style="
+                            color:#9e9e9e;
+                            margin-bottom:12px;">
+
+                            Konaklama
+                        </div>
+
+                        <div style="
+                            font-size:26px;
+                            font-weight:800;">
+
+                            5 Gece
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#"
+               class="detail-btn mt-5"
+               style="
+               max-width:320px;
+               font-size:18px;">
+
+                Premium Plan Oluştur
+
+            </a>
+
+        </div>
+
+        <div class="col-md-5">
+
+            <div style="
+                background:
+                linear-gradient(180deg,
+                rgba(255,255,255,.04),
+                rgba(255,255,255,.02));
+
+                border-radius:32px;
+
+                padding:35px;
+
+                border:1px solid rgba(200,164,93,.18);
+
+                position:relative;
+
+                overflow:hidden;">
+
+                <div style="
+                    position:absolute;
+                    top:-80px;
+                    right:-80px;
+
+                    width:220px;
+                    height:220px;
+
+                    background:rgba(200,164,93,.08);
+
+                    border-radius:50%;">
+                </div>
+
+                <div style="
+                    position:relative;
+                    z-index:2;">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:30px;">
+
+                        <div>
+
+                            <div style="
+                                color:#C8A45D;
+                                margin-bottom:8px;">
+
+                                Yapay Zeka Otel Önerisi
+                            </div>
+
+                            <h2 style="
+                                font-size:38px;
+                                font-weight:900;
+                                margin:0;">
+
+                                Ritz Paris
+                            </h2>
+
+                        </div>
+
+                        <div style="
+                            background:rgba(255,255,255,.06);
+                            padding:12px 18px;
+                            border-radius:18px;
+                            text-align:center;">
+
+                            <div style="
+                                color:#C8A45D;
+                                font-size:24px;
+                                font-weight:800;">
+
+                                9.7
+                            </div>
+
+                            <div style="
+                                color:#999;
+                                font-size:12px;">
+
+                                Mükemmel
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070"
+                         style="
+                         width:100%;
+                         height:230px;
+                         object-fit:cover;
+                         border-radius:24px;
+                         margin-bottom:30px;" />
+
+                    <div class="list-item">
+                        <span>🛏 Oda Tipi</span>
+                        <strong>Executive Suit</strong>
+                    </div>
+
+                    <div class="list-item">
+                        <span>🥂 Deneyim</span>
+                        <strong>Lüks & Romantik</strong>
+                    </div>
+
+                    <div class="list-item">
+                        <span>📍 Konum</span>
+                        <strong>Merkezi Paris</strong>
+                    </div>
+
+                    <div class="list-item">
+                        <span>🍽 Restoran</span>
+                        <strong>Michelin Deneyimi</strong>
+                    </div>
+
+                    <div class="list-item">
+                        <span>🚘 VIP Transfer</span>
+                        <strong>Özel Şoför</strong>
+                    </div>
+
+                    <div class="list-item">
+                        <span>🏊 Olanaklar</span>
+                        <strong>Spa • Havuz • Çatı Katı</strong>
+                    </div>
+
+                    <div style="
+                        margin-top:35px;
+                        padding-top:25px;
+                        border-top:1px solid rgba(255,255,255,.06);
+
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;">
+
+                        <div>
+
+                            <div style="
+                                color:#9e9e9e;
+                                margin-bottom:8px;">
+
+                                Toplam Tutar
+                            </div>
+
+                            <div style="
+                                color:#C8A45D;
+                                font-size:42px;
+                                font-weight:900;">
+
+                                $4,850
+                            </div>
+
+                        </div>
+
+                        <a href="#"
+                           class="detail-btn"
+                           style="
+                           width:auto;
+                           padding:16px 28px;">
+
+                            Rezervasyon Yap
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,308 @@
+﻿@model List<TripNova.WebUI.Dtos.HotelSearchDto>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    body {
+        background: linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.88)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        font-family: 'Segoe UI',sans-serif;
+    }
+
+    .search-container {
+        padding: 60px 40px;
+    }
+
+    .page-title {
+        font-size: 64px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+        .page-title span {
+            color: #C8A45D;
+        }
+
+    .subtitle {
+        color: #a7a7a7;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .hotel-card {
+        background: rgba(15,15,15,.92);
+        border: 1px solid rgba(200,164,93,.18);
+        border-radius: 28px;
+        overflow: hidden;
+        margin-bottom: 35px;
+        transition: .4s;
+        box-shadow: 0 10px 35px rgba(0,0,0,.45);
+        min-height: 760px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .hotel-card:hover {
+            transform: translateY(-8px);
+            border-color: #C8A45D;
+        }
+
+    .hotel-image {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .hotel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .hotel-badge {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(200,164,93,.15);
+        border: 1px solid rgba(200,164,93,.35);
+        color: #C8A45D;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-size: 13px;
+        backdrop-filter: blur(10px);
+    }
+
+    .hotel-content {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .hotel-name {
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .hotel-location {
+        color: #aaa;
+        margin-bottom: 25px;
+    }
+
+    .hotel-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hotel-price {
+        font-size: 42px;
+        font-weight: 900;
+        color: #C8A45D;
+    }
+
+    .hotel-score {
+        background: rgba(255,255,255,.05);
+        padding: 12px 20px;
+        border-radius: 18px;
+        text-align: center;
+    }
+
+        .hotel-score h5 {
+            margin: 0;
+            color: #C8A45D;
+            font-size: 24px;
+        }
+
+        .hotel-score span {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+    .detail-btn {
+        margin-top: auto;
+        width: 100%;
+        border: none;
+        border-radius: 16px;
+        background: #C8A45D;
+        color: black !important;
+        padding: 16px;
+        font-weight: 700;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        transition: .3s;
+    }
+
+        .detail-btn:hover {
+            background: #d7b46f;
+            transform: translateY(-2px);
+        }
+
+    .demo-box {
+        background: rgba(15,15,15,.9);
+        border-radius: 30px;
+        padding: 80px;
+        text-align: center;
+        border: 1px solid rgba(200,164,93,.25);
+        margin-bottom: 50px;
+    }
+
+        .demo-box h1 {
+            color: #C8A45D;
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .demo-box p {
+            color: #aaa;
+            font-size: 20px;
+        }
+
+</style>
+
+<div class="container-fluid search-container">
+
+    <h1 class="page-title">
+        Luxury <span>Hotels</span>
+    </h1>
+
+    <p class="subtitle">
+
+        Dünyanın dört bir yanındaki birinci sınıf otelleri keşfedin.
+    </p>
+
+    @if (Model == null || !Model.Any())
+    {
+       
+        <div class="row mt-5">
+            @foreach (var item in Model.Take(6))
+            {
+                <div class="col-md-6 mb-4">
+
+                    <div class="hotel-card">
+
+                        <div class="hotel-image">
+
+                            <img src="@item.property.photoUrls[0]" />
+
+                            <div class="hotel-badge">
+                                ✨ Premium Hotel
+                            </div>
+
+                        </div>
+
+                        <div class="hotel-content">
+
+                            <div class="hotel-name">
+                                @item.property.name
+                            </div>
+
+                            <div class="hotel-location">
+                                📍 @item.property.wishlistName
+                            </div>
+
+                            <div class="hotel-info">
+
+                                <div class="hotel-price">
+                                    $@item.property.priceBreakdown.grossPrice.value
+                                </div>
+
+                                <div class="hotel-score">
+                                    <h5>@item.property.reviewScore</h5>
+
+                                    <span>
+                                        @item.property.reviewScoreWord
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <a href="/Hotel/Detail?id=@item.hotel_id"
+                               class="detail-btn">
+
+                                Oteli İncele
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+    else
+    {
+        <h4 style="color:#C8A45D;margin-bottom:30px;">
+            @Model.Count
+        </h4>
+
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 mb-4">
+
+                    <div class="hotel-card">
+
+                        <div class="hotel-image">
+
+                            <img src="@item.property.photoUrls[0]" />
+
+                            <div class="hotel-badge">
+                                ✨ Guest Favorite
+                            </div>
+
+                        </div>
+
+                        <div class="hotel-content">
+
+                            <div class="hotel-name">
+                                @item.property.name
+                            </div>
+
+                            <div class="hotel-location">
+                                📍 @item.property.wishlistName
+                            </div>
+
+                            <div class="hotel-info">
+
+                                <div class="hotel-price">
+                                    $@item.property.priceBreakdown.grossPrice.value
+                                </div>
+
+                                <div class="hotel-score">
+                                    <h5>@item.property.reviewScore</h5>
+                                    <span>@item.property.reviewScoreWord</span>
+                                </div>
+
+                            </div>
+
+                            <a href="/Hotel/Detail?id=@item.hotel_id"
+                               class="detail-btn">
+
+                               Oteli İncele
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

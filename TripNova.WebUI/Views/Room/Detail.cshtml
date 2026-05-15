@@ -1,0 +1,193 @@
+﻿@{
+    var room = ViewBag.room;
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+
+        <!-- LEFT -->
+
+        <div class="col-md-8">
+
+            <!-- HERO IMAGE -->
+
+            <div class="room-hero">
+
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2000" />
+
+            </div>
+
+            <!-- ROOM INFO -->
+
+            <div class="detail-section mt-4">
+
+                <span class="room-badge">
+                    Premium Suite
+                </span>
+
+                <h1 class="fw-bold mt-4">
+                    @room.RoomName
+                </h1>
+
+                <p class="text-secondary mt-3"
+                   style="line-height:32px; font-size:17px;">
+
+                    Modern tasarım, premium konfor ve eşsiz manzara ile unutulmaz bir konaklama deneyimi.
+
+                </p>
+
+            </div>
+
+            <!-- ROOM FEATURES -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Oda Özellikleri
+                </h2>
+
+                <div class="room-features">
+
+                    <span>👑 @room.Bed</span>
+                    <span>📐 @room.Size</span>
+                    <span>🌊 @room.View</span>
+                    <span>📶 Ücretsiz Wifi</span>
+                    <span>🍳 Kahvaltı Dahil</span>
+                    <span>❄ Klima</span>
+
+                </div>
+
+            </div>
+
+            <!-- ROOM GALLERY -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Oda Galerisi
+                </h2>
+
+                <div class="gallery-grid">
+
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200" />
+
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200" />
+
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200" />
+
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200" />
+
+                </div>
+
+            </div>
+
+            <!-- HOTEL RULES -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Oda Kuralları
+                </h2>
+
+                <div class="rules-grid">
+
+                    <div class="rule-box">
+                        🕓 Check-in: 14:00 sonrası
+                    </div>
+
+                    <div class="rule-box">
+                        🕛 Check-out: 12:00 öncesi
+                    </div>
+
+                    <div class="rule-box">
+                        🚭 Sigara içilmez
+                    </div>
+
+                    <div class="rule-box">
+                        🐶 Evcil hayvan kabul edilmez
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="col-md-4">
+
+            <div class="reservation-card">
+
+                <span class="hotel-badge">
+                    Son 2 Oda
+                </span>
+
+                <h1 class="fw-bold mt-4">
+                    $@room.Price
+                </h1>
+
+                <hr style="border-color:#2a2a2a;" />
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span class="text-secondary">
+                        Kapasite
+                    </span>
+
+                    <strong>
+                        @room.Capacity
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span class="text-secondary">
+                        Yatak
+                    </span>
+
+                    <strong>
+                        @room.Bed
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span class="text-secondary">
+                        Oda Boyutu
+                    </span>
+
+                    <strong>
+                        @room.Size
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span class="text-secondary">
+                        Manzara
+                    </span>
+
+                    <strong>
+                        @room.View
+                    </strong>
+
+                </div>
+
+                <button class="reserve-btn mt-4">
+
+                    Şimdi Rezervasyon Yap
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

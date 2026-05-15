@@ -1,0 +1,547 @@
+﻿@model List<TripNova.WebUI.Dtos.SearchLocationDto>?
+
+<div class="row align-items-center" style="min-height:90vh;">
+
+    <div class="col-md-6">
+
+        <div style="
+        display:inline-block;
+        background:rgba(200,164,93,0.15);
+        padding:10px 20px;
+        border-radius:30px;
+        border:1px solid rgba(200,164,93,0.3);
+        margin-bottom:20px;">
+
+            <p style="
+            color:#C8A45D;
+            letter-spacing:3px;
+            margin:0;
+            font-size:14px;
+            font-weight:bold;">
+
+                <i class="fa-solid fa-star me-2"></i>
+                DÜNYANIN EN İYİ OTELLERİ
+
+            </p>
+
+        </div>
+
+        <h1 style="
+        font-size:80px;
+        font-weight:bold;
+        line-height:90px;">
+
+            Hayalindeki <br />
+
+            <span style="color:#C8A45D;">
+                Konaklamayı
+            </span>
+
+            Bul
+
+        </h1>
+
+        <p class="mt-4 text-secondary fs-5">
+            Dünyanın en iyi otelleri arasından seçim yap.
+        </p>
+
+        <div class="row mt-5 text-center">
+
+            <div class="col-md-4">
+
+                <h2 style="color:#C8A45D;">
+                    2M+
+                </h2>
+
+                <p>Otel Seçeneği</p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h2 style="color:#C8A45D;">
+                    150+
+                </h2>
+
+                <p>Ülke</p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h2 style="color:#C8A45D;">
+                    4.9
+                </h2>
+
+                <p>Ortalama Puan</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <form method="get" asp-action="Search" asp-controller="Hotel">
+
+            <div style="
+            background:rgba(23,23,23,0.88);
+            padding:40px;
+            border-radius:30px;
+            backdrop-filter:blur(12px);
+            border:1px solid rgba(255,255,255,0.05);">
+
+                <div class="d-flex justify-content-between mb-4">
+
+                    <h2>Otel Ara</h2>
+
+                    <span class="text-secondary">
+                        RapidAPI Powered
+                    </span>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-earth-europe me-2"
+                               style="color:#C8A45D;"></i>
+                            Ülke
+                        </label>
+
+                        <select class="form-control bg-dark text-white border-0 mt-2"
+                                style="height:50px; border-radius:12px;">
+
+                            <option>France</option>
+                            <option>Italy</option>
+                            <option>Spain</option>
+                            <option>Germany</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-location-dot me-2"
+                               style="color:#C8A45D;"></i>
+                            Şehir
+                        </label>
+
+                        <input type="text"
+                               name="city"
+                               class="form-control bg-dark text-white border-0 mt-2"
+                               style="height:50px;border-radius:12px;"
+                               placeholder="Paris" />
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-calendar-days me-2"
+                               style="color:#C8A45D;"></i>
+                            Giriş Tarihi
+                        </label>
+
+                        <input type="date"
+                               class="form-control bg-dark text-white border-0 mt-2"
+                               style="height:50px;border-radius:12px;" />
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-calendar-check me-2"
+                               style="color:#C8A45D;"></i>
+                            Çıkış Tarihi
+                        </label>
+
+                        <input type="date"
+                               class="form-control bg-dark text-white border-0 mt-2"
+                               style="height:50px;border-radius:12px;" />
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-user me-2"
+                               style="color:#C8A45D;"></i>
+                            Yetişkin Sayısı
+                        </label>
+
+                        <input type="number"
+                               class="form-control bg-dark text-white border-0 mt-2"
+                               style="height:50px;border-radius:12px;"
+                               value="2" />
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            <i class="fa-solid fa-child-reaching me-2"
+                               style="color:#C8A45D;"></i>
+                            Çocuk Sayısı
+                        </label>
+
+                        <input type="number"
+                               class="form-control bg-dark text-white border-0 mt-2"
+                               style="height:50px;border-radius:12px;"
+                               value="0" />
+
+                    </div>
+
+                </div>
+
+                <button class="btn w-100 mt-3"
+                        style="
+                        background:#C8A45D;
+                        color:black;
+                        font-weight:bold;
+                        height:58px;
+                        border-radius:15px;
+                        font-size:18px;">
+
+                    <i class="fa-solid fa-magnifying-glass me-2"></i>
+
+                    Otel Ara
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+@if (ViewBag.hotels != null)
+{
+    <div class="container mt-5 mb-5">
+
+        <div class="row">
+
+            @{
+                var hotelList = ViewBag.hotels.data.hotels;
+            }
+
+            @foreach (var item in hotelList)
+            {
+                <div class="col-12 mb-4">
+
+                    <div class="premium-hotel-card">
+
+                        <div class="hotel-image-area">
+
+                            <img src="@item.property.photoUrls[0]" />
+
+                            <div class="hotel-badge">
+                                ⭐ Popüler
+                            </div>
+
+                        </div>
+
+                        <div class="hotel-content-area">
+
+                            <div class="hotel-left">
+
+                                <p class="hotel-location">
+                                    📍 @item.property.wishlistName
+                                </p>
+
+                                <h2 class="hotel-title">
+                                    @item.property.name
+                                </h2>
+
+                                <div class="hotel-stars">
+
+                                    ⭐⭐⭐⭐⭐
+
+                                    <span class="review-score">
+                                        @item.property.reviewScore
+                                    </span>
+
+                                </div>
+
+                                <div class="hotel-features">
+
+                                    <span>📶 Wifi</span>
+                                    <span>🍽 Restaurant</span>
+                                    <span>🏊 Pool</span>
+                                    <span>🚗 Parking</span>
+
+                                </div>
+
+                                <p class="hotel-description">
+
+                                    Lüks ve premium konaklama deneyimi.
+                                    Şehrin en popüler bölgelerinden birinde.
+
+                                </p>
+
+                            </div>
+
+                            <div class="hotel-right">
+
+                                <h1 class="hotel-price">
+
+                                    €@item.property.priceBreakdown.grossPrice.value
+
+                                </h1>
+
+                                <p class="per-night">
+                                    / gece
+                                </p>
+
+                                <a href="/Hotel/Detail/@item.property.id"
+                                   class="hotel-detail-btn">
+
+                                    Detay →
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        </div>
+
+    </div>
+}
+
+<div class="container mb-5 mt-5">
+
+    <div class="text-center mb-5">
+
+        <p style="
+        color:#C8A45D;
+        letter-spacing:4px;">
+
+            CANLI VERİLER
+
+        </p>
+
+        <h1 class="fw-bold">
+
+            Seyahat Araçları
+
+        </h1>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h5>
+                        💵 Döviz
+                    </h5>
+
+                    <span class="text-secondary">
+                        Live
+                    </span>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>USD / TRY</span>
+
+                    <strong style="color:#C8A45D;">
+
+                        @ViewBag.usdTry
+
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>USD / EUR</span>
+
+                    <strong style="color:#C8A45D;">
+
+                        @ViewBag.usdEur
+
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <span>USD / GBP</span>
+
+                    <strong style="color:#C8A45D;">
+
+                        @ViewBag.usdGbp
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card text-center">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h5>
+                        ☁️ Weather
+                    </h5>
+
+                    <span class="text-secondary">
+                        Live
+                    </span>
+
+                </div>
+
+                <h1 style="
+                color:#C8A45D;
+                font-size:55px;
+                font-weight:bold;">
+
+                    @ViewBag.weatherTemp°C
+
+                </h1>
+
+                <p class="text-secondary mt-3">
+
+                    @ViewBag.weatherCity
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h5>
+                        ₿ Crypto
+                    </h5>
+
+                    <span class="text-secondary">
+                        Market
+                    </span>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>Bitcoin</span>
+
+                    <strong style="color:#C8A45D;">
+                        $104K
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>Ethereum</span>
+
+                    <strong style="color:#C8A45D;">
+                        $2.5K
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <span>Solana</span>
+
+                    <strong style="color:#C8A45D;">
+                        $176
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h5>
+                        ⛽ Fuel
+                    </h5>
+
+                    <span class="text-secondary">
+                        Türkiye
+                    </span>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>Benzin</span>
+
+                    <strong style="color:#C8A45D;">
+                        65.50 ₺
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+
+                    <span>Motorin</span>
+
+                    <strong style="color:#C8A45D;">
+                        67.80 ₺
+                    </strong>
+
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <span>LPG</span>
+
+                    <strong style="color:#C8A45D;">
+                        24.40 ₺
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

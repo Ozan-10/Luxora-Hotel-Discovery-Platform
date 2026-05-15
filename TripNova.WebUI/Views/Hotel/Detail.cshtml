@@ -1,0 +1,390 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    dynamic hotel = null;
+
+    if (ViewBag.hotel != null)
+    {
+        hotel = ViewBag.hotel.data;
+    }
+}
+
+@if(hotel == null)
+{
+    <h1 style="color:white;text-align:center;margin-top:100px;">
+        Hotel detail not found.
+    </h1>
+}
+else
+{
+
+<div class="container mt-5 mb-5">
+
+    <!-- TOP INFO -->
+
+    <div class="top-info-bar">
+
+        <div class="info-pill">
+            ⭐ Lüks Otel
+        </div>
+
+        <div class="info-pill">
+            📍 @hotel.city
+        </div>
+
+        <div class="info-pill">
+            🏨 Premium Koleksiyon
+        </div>
+
+        <div class="info-pill">
+            🌍 @hotel.country_trans
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <!-- LEFT SIDE -->
+
+        <div class="col-md-8">
+
+            <!-- HERO IMAGE -->
+
+            <div class="hero-image">
+
+                <img src="@hotel.property_photo" />
+
+            </div>
+
+            <!-- ABOUT -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Otel Hakkında
+                </h2>
+
+                <p class="text-secondary"
+                   style="line-height:32px; font-size:17px;">
+
+                    Şehrin kalbinde premium konaklama deneyimi yaşayın.
+                    Lüks odalar, eşsiz hizmet ve unutulmaz bir atmosfer sizi bekliyor.
+
+                </p>
+
+            </div>
+
+            <!-- FEATURES -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Otel Özellikleri
+                </h2>
+
+                <div class="modern-features">
+
+                    <span>📶 Ücretsiz Wifi</span>
+                    <span>🏊 Yüzme Havuzu</span>
+                    <span>🍽 Restoran</span>
+                    <span>🚗 Otopark</span>
+                    <span>💆 Spa Merkezi</span>
+                    <span>🍸 Bar</span>
+
+                </div>
+
+            </div>
+
+            <!-- ROOMS -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Oda Bilgileri
+                </h2>
+
+                <div class="room-grid">
+
+                    <div class="room-card">
+
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200" />
+
+                        <div class="room-content">
+
+                            <h4>Deluxe Oda</h4>
+
+                            <p>
+                                Şehir manzaralı premium deluxe oda deneyimi.
+                            </p>
+
+                            <div class="room-tags">
+
+                                <span>🛏 2 Kişilik</span>
+                                <span>📶 Wifi</span>
+                                <span>🍳 Kahvaltı Dahil</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="room-card">
+
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200" />
+
+                        <div class="room-content">
+
+                            <h4>Executive Suite</h4>
+
+                            <p>
+                                Ultra lüks king size suite deneyimi.
+                            </p>
+
+                            <div class="room-tags">
+
+                                <span>👑 King Bed</span>
+                                <span>🌊 Deniz Manzarası</span>
+                                <span>💆 Spa Erişimi</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CHECK-IN -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Giriş & Çıkış Bilgileri
+                </h2>
+
+                <div class="info-grid">
+
+                    <div class="info-box">
+
+                        <h5>🕓 Check-in</h5>
+
+                        <p>14:00 sonrası</p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h5>🕛 Check-out</h5>
+
+                        <p>12:00 öncesi</p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h5>🚭 Sigara</h5>
+
+                        <p>Sigara içilmez</p>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h5>🐶 Evcil Hayvan</h5>
+
+                        <p>İzin verilmiyor</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- REVIEWS -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    ⭐ Misafir Yorumları
+                </h2>
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <strong>Ozan Kuzulu</strong>
+
+                        <span>9.4 Mükemmel</span>
+
+                    </div>
+
+                    <p class="text-secondary">
+
+                        Mükemmel odalar ve kaliteli hizmet ile harika bir konaklama deneyimi yaşadık.
+
+                    </p>
+
+                </div>
+
+                <div class="review-card mt-4">
+
+                    <div class="review-top">
+
+                        <strong>Yahya Işıktaş</strong>
+
+                        <span>9.1 Harika</span>
+
+                    </div>
+
+                    <p class="text-secondary">
+
+                        Konumu ve atmosferi gerçekten harikaydı. Kesinlikle tavsiye ederim.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- LOCATION -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Konum
+                </h2>
+
+                <iframe src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="350"
+                        style="border:0; border-radius:24px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+
+            </div>
+
+            <!-- NEARBY -->
+
+            <div class="detail-section mt-4">
+
+                <h2 class="fw-bold mb-4">
+                    Yakındaki Noktalar
+                </h2>
+
+                <div class="nearby-list">
+
+                    <div class="nearby-item">
+                        🗼 Eiffel Tower — 1.2 km
+                    </div>
+
+                    <div class="nearby-item">
+                        🚇 Metro Station — 300m
+                    </div>
+
+                    <div class="nearby-item">
+                        🛍 Luxury Mall — 850m
+                    </div>
+
+                    <div class="nearby-item">
+                        ✈ Airport — 18 km
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="col-md-4">
+
+            <div class="reservation-card">
+
+                <span class="hotel-badge">
+
+                    Misafir Favorisi
+
+                </span>
+
+                <h1 class="fw-bold mt-4">
+
+                    @hotel.hotel_name
+
+                </h1>
+
+                <p class="text-secondary mt-3">
+
+                    📍 @hotel.address
+
+                </p>
+
+                <div class="price-area">
+
+                    <p class="old-price">
+
+                        $17.500
+
+                    </p>
+
+                    <h1 class="price">
+
+                        $12.900
+
+                    </h1>
+
+
+                </div>
+
+                <div class="mt-4">
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <span class="text-secondary">
+                            Şehir
+                        </span>
+
+                        <strong>@hotel.city</strong>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <span class="text-secondary">
+                            Bölge
+                        </span>
+
+                        <strong>@hotel.district</strong>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <span class="text-secondary">
+                            Para Birimi
+                        </span>
+
+                        <strong>@hotel.currency_code</strong>
+
+                    </div>
+
+                </div>
+
+                <button class="reserve-btn mt-4">
+
+                    Rezervasyon Yap
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+}

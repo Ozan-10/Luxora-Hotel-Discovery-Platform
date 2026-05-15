@@ -1,0 +1,271 @@
+﻿<div class="container mt-5">
+
+    <div style="
+    max-width:700px;
+    margin:auto;
+    border-radius:30px;
+    padding:50px;
+    background:
+    linear-gradient(
+    145deg,
+    rgba(23,23,23,0.95),
+    rgba(35,35,35,0.95));
+    border:1px solid rgba(200,164,93,0.15);
+    box-shadow:
+    0 0 30px rgba(200,164,93,0.08);
+    color:white;
+    position:relative;
+    overflow:hidden;">
+
+        <div style="
+        position:absolute;
+        width:250px;
+        height:250px;
+        background:rgba(200,164,93,0.08);
+        border-radius:50%;
+        top:-80px;
+        right:-80px;
+        filter:blur(20px);">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <span style="
+                background:rgba(200,164,93,0.15);
+                color:#C8A45D;
+                padding:8px 18px;
+                border-radius:30px;
+                font-size:13px;
+                letter-spacing:2px;">
+
+                    LIVE WEATHER
+
+                </span>
+
+                <h1 class="fw-bold mt-4"
+                    style="font-size:60px;">
+
+                    @ViewBag.city
+
+                </h1>
+
+                <h2 style="
+                color:#C8A45D;
+                font-size:55px;
+                font-weight:bold;">
+
+                    @ViewBag.temp °C
+
+                </h2>
+
+                <p class="text-secondary fs-5">
+                    @ViewBag.desc
+                </p>
+
+            </div>
+
+            <div>
+
+                <img src="https:@ViewBag.icon"
+                     style="
+                     width:160px;
+                     filter:drop-shadow(0 0 15px rgba(255,255,255,0.25));" />
+
+            </div>
+
+        </div>
+
+        <div class="row mt-5 text-center">
+
+            <div class="col-md-4">
+
+                <div style="
+                background:rgba(255,255,255,0.03);
+                padding:25px;
+                border-radius:20px;">
+
+                    <h5 class="text-secondary">
+                        Feels Like
+                    </h5>
+
+                    <h3 style="color:#C8A45D;">
+                        @ViewBag.temp °C
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div style="
+                background:rgba(255,255,255,0.03);
+                padding:25px;
+                border-radius:20px;">
+
+                    <h5 class="text-secondary">
+                        Condition
+                    </h5>
+
+                    <h3 style="color:#C8A45D;">
+                        Cloudy
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div style="
+                background:rgba(255,255,255,0.03);
+                padding:25px;
+                border-radius:20px;">
+
+                    <h5 class="text-secondary">
+                        Status
+                    </h5>
+
+                    <h3 style="color:#C8A45D;">
+                        Live
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container mb-5">
+
+    <div class="text-center mb-5">
+
+        <p style="
+        color:#C8A45D;
+        letter-spacing:3px;">
+
+            LIVE TRAVEL SERVICES
+
+        </p>
+
+        <h1 class="fw-bold">
+            Seyahat Araçları
+        </h1>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <h5 class="mb-4">
+                    💵 Döviz Kurları
+                </h5>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>USD</span>
+                    <strong>38.72 ₺</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>EUR</span>
+                    <strong>42.11 ₺</strong>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span>GBP</span>
+                    <strong>49.88 ₺</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card text-center">
+
+                <h5 class="mb-4">
+                    ☁️ Hava Durumu
+                </h5>
+
+                <h1 style="
+                color:#C8A45D;
+                font-size:55px;">
+
+                    13°C
+
+                </h1>
+
+                <p class="text-secondary">
+                    Paris / Cloudy
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <h5 class="mb-4">
+                    ₿ Kripto
+                </h5>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Bitcoin</span>
+                    <strong>$104K</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Ethereum</span>
+                    <strong>$2.5K</strong>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span>Solana</span>
+                    <strong>$176</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="dashboard-card">
+
+                <h5 class="mb-4">
+                    ⛽ Akaryakıt
+                </h5>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Benzin</span>
+                    <strong>46.82 ₺</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Motorin</span>
+                    <strong>44.15 ₺</strong>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span>LPG</span>
+                    <strong>24.40 ₺</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
